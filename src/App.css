@@ -1,38 +1,64 @@
+/* Enhanced styles for a more attractive interface */
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* You can choose a Google Font for a modern look */
+  background-color: #f8f8f8; /* Soft background color */
+}
+
 .App {
   text-align: center;
+  padding: 2rem; /* Add some padding around the content */
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin; /* Reduce logo size a bit */
   pointer-events: none;
+  animation: logo-spin 10s linear infinite; /* Faster and smoother animation */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Updated animation */
+@keyframes logo-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #4285f4; /* A vibrant header color */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 2vmin); /* Slightly larger font */
   color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Add a subtle text shadow */
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ff6f00; /* Change link color to a contrasting one */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease-in-out; /* Add smooth color transition on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.App-link:hover {
+  color: #ffa726; /* Change link color on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .App-logo {
+    height: 10vmin; /* Adjust logo size for smaller screens */
   }
 }
+
+/* ... (other styles) ... */
+
